@@ -107,9 +107,10 @@ img {
 
 /* Birthday output styles */
 h2 {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 70px;
-  font-style: italic;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
 }
 span {
   color: var(--Purple);
@@ -124,5 +125,46 @@ span {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 500px) {
+/* responsive css */
+@media (max-width: 800px) {
+  main {
+    width: 95%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  input {
+    width: 100px;
+    font-size: 14px;
+  }
+  #date-input {
+    gap: 5px;
+  }
+  #button {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  hr {
+    width: 100%;
+    margin: 20px 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  button {
+    z-index: 2; /* Set a higher z-index to place the button on top of the line */
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 50px;
+    margin-left: -40px;
+  }
 }
