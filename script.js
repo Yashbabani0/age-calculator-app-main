@@ -21,6 +21,21 @@ inputDay.addEventListener("input", validateDay);
 inputMonth.addEventListener("input", validateMonth);
 inputYear.addEventListener("input", validateYear);
 
+// Event listener for button click
+btn.addEventListener("click", calculateAge);
+
+// Event listeners for Enter key press
+inputDay.addEventListener("keyup", handleEnterKey);
+inputMonth.addEventListener("keyup", handleEnterKey);
+inputYear.addEventListener("keyup", handleEnterKey);
+
+// Function to handle Enter key press
+function handleEnterKey(event) {
+  if (event.key === "Enter") {
+    calculateAge();
+  }
+}
+
 // Function to validate day input
 function validateDay() {
   if (+inputDay.value > 31) {
